@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+@font-face { 
+    font-family: Kanit; 
+    src: url('fonts/Kanit/Kanit-ExtraLight.ttf'); 
+  } 
+  
+  p {
+    margin: 0px;
+    padding: 0px;
+    font-family: Kanit;
+    font-size: 25px;
+    }
+
+@font-face { 
+    font-family: Candyshop; 
+    src: url('fonts/candyshop/Candyshop.ttf'); 
+  }   
+
+.bgimg {
+  background-color: #005EB8;
+  height: 100%;
+  position: relative;
+  font-family: "Candyshop";
+  font-size: 25px;
+  color: white;
+}
+
+
+.container {
+  position: relative;
+  text-align: center;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  text-align: center;
+
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: white;
+  text-align: center;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+h2 {
+  color: #005EB8;
+  font-family: Kanit;  
+}
+
+p {
+  color: #005EB8;
+  font-family: Kanit;
+}
+
+.middle {
+  display: grid;
+  width: 90%;
+  height: 100%;
+  align-content: space-evenly;
+  grid-template-columns: auto auto auto auto;
+  /* background-color: #2196F3; */
+  text-align: center;
+  padding-left: 5%;
+}
+
+</style>
+<body>
+
+
+<div class="bgimg">
+  <div class="middle">
+
+  <span class="container">
+    <img src="assets_backup/shark1_stretching0001.png" alt="shark1" class="image">
+    <button class="overlay" onclick="location.href='./game.html?sharktype=shark1'">
+      <p><b><span style="font-family:Candyshop">Bob</span><br>the Blue shark</b></p>
+      <p><br> It has countershading protects from above and below. The shortfin mako shark is able to elevate its body temperature almost 20°F above the surrounding water. </p>
+    </button>
+  </span>
+ 
+    <span class="container">
+      <img src="assets_backup/shark2_stretching0001.png" alt="shark2" class="image">
+      <button class="overlay" onclick="location.href='./game.html?sharktype=shark2'">
+        <p><b><span style="font-family:Candyshop">Jack</span><br>the Hammerhead shark</b></p>
+        <p><br> Why they school is still mystery. Their unique eye position allows for 360 degree vision. </p>
+      </button>
+    </span>
+
+      <span class="container">
+        <img src="assets_backup/shark3_stretching0001.png" alt="shark3" class="image">
+        <button class="overlay" onclick="location.href='./game.html?sharktype=shark3'">
+          <p><b><span style="font-family:Candyshop">Lucy</span><br>the Epaulette shark</b></p>
+          <p><br> Their protective coloration means safety. Their fins work as feet. </p>
+          </button>
+        </span>
+
+
+  </div>
+</div>
+
+
+</body>
+</html>
