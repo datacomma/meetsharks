@@ -1,71 +1,51 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>MeetSharks</title>
-    <script src="./js/p5.min.js"></script>
-    <script src="./js/p5.play.js"></script>
-    <script src="./js/player.js"></script>
-    <link type="text/css" rel="stylesheet" href="style.css">
+<!doctype html>
+<html lang="en">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
-    <!-- <script src="player.js"></script> -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#005eb8">
+    <title>Sharks! · Explore the ocean</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="lib/p5.js"></script>
+    <script defer src="lib/p5.play.js"></script>
+    <script defer src="facts.js"></script>
+    <script defer src="app.js"></script>
+</head>
 
-  </head>
-  <body>
-    <!-- <audio loop autoplay>
-      <source src="/assets/bgmusic.mp3" type="audio/mp3">
-    </audio> -->
-    <!-- loading page -->
-    <!-- <div class="wrap"> -->
-      <!-- <div id="loader" class="center"> -->
-        <!-- <div class="bounceball"></div> -->
-        <!-- <div class="text">NOW LOADING</div> -->
-        <!-- <span> &times; </span>
-      </div>
-    </div> -->
-
-    <div id = "container">
-    <div id="myP5">
-      <script src="./js/app.js"></script>
+<body class="game-page">
+    <div id="ocean" aria-label="Ocean exploration game"></div>
+    <header class="game-header">
+        <a class="brand" href="index.html">SHARKS<span>!</span></a>
+        <span id="progress" class="progress" role="status">0 / 18 discoveries</span>
+        <button id="sound" class="tool" aria-pressed="true">Sound on</button>
+    </header>
+    <div id="loading" role="status">Getting the ocean ready…</div>
+    <div id="encounter" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+    <div class="game-footer">
+        <div class="explore-hint"><span class="eyebrow">A little curiosity goes a long way</span><span id="hint">Drag to
+                swim · Arrow keys or WASD · Find fluffy white bubbles</span></div>
+        <nav class="game-tools" aria-label="Game controls">
+            <a class="tool" href="character.html">Change shark</a>
+            <button class="tool" id="field-guide">Field guide</button>
+            <button class="tool" id="spin">Spin</button>
+        </nav>
     </div>
+    <dialog id="fact-dialog" aria-labelledby="fact-title" aria-describedby="fact-body">
+        <div class="fact-card">
+            <div class="fact-top"><span class="eyebrow" id="fact-category">Ocean field notes</span><button
+                    id="close-fact" class="close" aria-label="Close fact">×</button></div>
+            <h1 id="fact-title"></h1>
+            <p id="fact-body"></p>
+            <div id="found-status" class="found-status" hidden><strong>✓ Found</strong><span id="found-hint">This fluffy
+                    bubble is now a flag. Swim back to the flag to read this fact again.</span></div>
+            <a id="fact-source" target="_blank" rel="noopener noreferrer">Explore the science ↗</a>
+            <div class="fact-bottom"><span id="fact-count"></span><button class="primary" id="continue">Keep exploring
+                    →</button></div>
+            <div id="guide-list" class="guide-list" hidden></div>
+        </div>
+    </dialog>
+    <audio id="music" loop autoplay preload="auto" src="assets/bgmusic.mp3"></audio>
+</body>
 
-    <!-- <div class="hidden_info">
-      <div><span id="info_01" class="info" visibility: hidden style="padding-right:3px; padding-top: 3px; display:inline-block;"> <img id = "img1" class="img" width="400" height="500" src="assets/shark1_stretching0001.png"></img> </span></div>
-    </div> 
-    <div class="hidden_info"> 
-      <div><span id="info_02" class="info" visibility: hidden style="padding-right:3px; padding-top: 3px; display:inline-block;"> <img id = "img2" class="img" width="400" height="500" src="assets/shark2_stretching0001.png"></img> </span></div>
-    </div> 
-    <div class="hidden_info"> 
-      <div><span id="info_03" class="info" visibility: hidden style="padding-right:3px; padding-top: 3px; display:inline-block;"> <img id = "img3" class="img" width="400" height="500" src="assets/shark3_stretching0001.png"></img> </span></div>  
-    </div>  -->
-
-  <span class="container1">
-  <a href="#" onclick="location.href='./game.html?sharktype=shark1'">
-    <img src="assets/shark1_stretching0001.png" alt="shark1" class="image1" style="width:2%">
-  </a>
-    <div class="bottom1">
-      <div class="text1">Bob</div>
-    </div>
-  </span>
-
-  <span class="container2">
-    <a href="#" onclick="location.href='./game.html?sharktype=shark2'">
-    <img src="assets/shark2_stretching0001.png" alt="shark2" class="image2" style="width:2%">
-    </a>
-    <div class="bottom2">
-      <div class="text2">Jack</div>
-    </div>
-  </span>
-
-  <span class="container3">
-    <a href="#" onclick="location.href='./game.html?sharktype=shark3'">
-    <img src="assets/shark3_stretching0001.png" alt="shark3" class="image3" style="width:2%">
-    </a>
-    <div class="bottom3">
-      <div class="text3">Lucy</div>
-    </div>
-  </span>
-
-  </body>
 </html>
