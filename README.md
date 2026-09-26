@@ -4,10 +4,9 @@
     
 **Live website**: [meetsharks.com](https://meetsharks.com "meetsharks.com")     
     
-**author**: [Baihan Lin](https://www.baihan.org "baihan.org"), [Esther Zhang](https://www.estherzhang.com "estherzhang.com")
+**author**: [Esther Zhang](https://www.estherzhang.com "estherzhang.com") [Baihan Lin](https://www.baihan.org "baihan.org"), 
 
 **since**: 2021
-    
     
 ![demo](./readme_assets/sharks.gif)
     
