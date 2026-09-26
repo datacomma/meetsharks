@@ -1,126 +1,47 @@
-<!DOCTYPE html>
-<html>
-<style>
-body, html {
-  height: 100%;
-  margin: 0;
-}
+<!doctype html>
+<html lang="en">
 
-@font-face { 
-    font-family: Kanit; 
-    src: url('fonts/Kanit/Kanit-ExtraLight.ttf'); 
-  } 
-  
-  p {
-    margin: 0px;
-    padding: 0px;
-    font-family: Kanit;
-    font-size: 25px;
-    }
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <title>Choose your shark · Sharks!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-@font-face { 
-    font-family: Candyshop; 
-    src: url('fonts/candyshop/Candyshop.ttf'); 
-  }   
-
-.bgimg {
-  background-color: #005EB8;
-  height: 100%;
-  position: relative;
-  font-family: "Candyshop";
-  font-size: 25px;
-  color: white;
-}
-
-
-.container {
-  position: relative;
-  text-align: center;
-}
-
-.image {
-  display: block;
-  width: 100%;
-  height: auto;
-  text-align: center;
-
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: white;
-  text-align: center;
-  border-radius: 10px 10px 10px 10px;
-}
-
-.container:hover .overlay {
-  opacity: 1;
-}
-
-h2 {
-  color: #005EB8;
-  font-family: Kanit;  
-}
-
-p {
-  color: #005EB8;
-  font-family: Kanit;
-}
-
-.middle {
-  display: grid;
-  width: 90%;
-  height: 100%;
-  align-content: space-evenly;
-  grid-template-columns: auto auto auto auto;
-  /* background-color: #2196F3; */
-  text-align: center;
-  padding-left: 5%;
-}
-
-</style>
-<body>
-
-
-<div class="bgimg">
-  <div class="middle">
-
-  <span class="container">
-    <img src="assets_hd/shark1_stretching0001.png" alt="shark1" class="image">
-    <button class="overlay" onclick="location.href='./game.html?sharktype=shark1'">
-      <p><b><span style="font-family:Candyshop">Bob</span><br>the Blue shark</b></p>
-      <p><br> It has countershading protects from above and below. The shortfin mako shark is able to elevate its body temperature almost 20°F above the surrounding water. </p>
-    </button>
-  </span>
- 
-    <span class="container">
-      <img src="assets_hd/shark2_stretching0001.png" alt="shark2" class="image">
-      <button class="overlay" onclick="location.href='./game.html?sharktype=shark2'">
-        <p><b><span style="font-family:Candyshop">Jack</span><br>the Hammerhead shark</b></p>
-        <p><br> Why they school is still mystery. Their unique eye position allows for 360 degree vision. </p>
-      </button>
-    </span>
-
-      <span class="container">
-        <img src="assets_hd/shark3_stretching0001.png" alt="shark3" class="image">
-        <button class="overlay" onclick="location.href='./game.html?sharktype=shark3'">
-          <p><b><span style="font-family:Candyshop">Lucy</span><br>the Epaulette shark</b></p>
-          <p><br> Their protective coloration means safety. Their fins work as feet. </p>
-          </button>
-        </span>
-
-
-  </div>
-</div>
-
-
+<body class="landing">
+    <header><a class="brand" href="index.html">SHARKS<span>!</span></a><a href="index.html">← Back</a></header>
+    <main>
+        <h1 class="selection-title">Who will you swim with?</h1>
+        <p class="selection-intro">Pick a companion and follow your curiosity. You can change sharks along the way.</p>
+        <section class="how-to-play" aria-labelledby="play-title">
+            <h2 id="play-title">How to play</h2>
+            <p><strong>Hold and drag to swim</strong>, or use arrow keys / WASD. Swim into the <strong>fluffy white
+                    bubbles</strong> to discover shark facts. Each bubble becomes a flag—visit the flag to read it
+                again.</p>
+            <p class="play-extra">Bounce with jellyfish and seals, snack on small fish, and try a spin!</p>
+        </section>
+        <div class="characters">
+            <a class="character" href="game.html?sharktype=shark1"><img src="assets/shark1_stretching0001.png"
+                    alt="Bob the blue shark">
+                <h2>Bob</h2><span class="species">The blue shark</span>
+                <p>A blue back and pale belly help this ocean traveller blend into the water.</p><span
+                    class="primary">Swim with Bob →</span>
+            </a>
+            <a class="character" href="game.html?sharktype=shark2"><img src="assets/shark2_stretching0001.png"
+                    alt="Jack the hammerhead shark">
+                <h2>Jack</h2><span class="species">The hammerhead shark</span>
+                <p>A wide, distinctive head makes this curious companion easy to recognise.</p><span
+                    class="primary">Swim with Jack →</span>
+            </a>
+            <a class="character" href="game.html?sharktype=shark3"><img src="assets/shark3_stretching0001.png"
+                    alt="Lucy the epaulette shark">
+                <h2>Lucy</h2><span class="species">The epaulette shark</span>
+                <p>A little reef explorer that can use its fins to walk along the seabed.</p><span class="primary">Swim
+                    with Lucy →</span>
+            </a>
+        </div>
+    </main>
+    <footer>Explore at your own pace. There’s always something to discover.</footer>
 </body>
+
 </html>
